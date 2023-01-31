@@ -16,9 +16,31 @@ pip install nbdev_sieve
 For now only the sieve(N: int) generator can be called
 
 ``` python
-N = 100
+N = 17
 primes = [p for p in sieve(N)]
-print (len(primes))
+print (primes)
 ```
 
-    25
+    [2, 3, 5, 7, 11, 13]
+
+``` python
+## Helper functions
+def primes(N: int = 10):
+    "get list of primes"
+    return [p for p in sieve(N)]
+
+def prime_count(om: int = 8):
+    "#primes < 10^om"
+    return {N: len(primes(N)) for o in range(1,om) if(N:=10**o)}
+
+π = prime_count()
+π
+```
+
+    {10: 4,
+     100: 25,
+     1000: 168,
+     10000: 1229,
+     100000: 9592,
+     1000000: 78498,
+     10000000: 664579}

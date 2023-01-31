@@ -11,8 +11,8 @@ def sieve(N=10):
     "sieve of Eratosthenes"
     assert N>1
     prime = [True]*(N+1)
-    for i in range (2,N):
+    for i in range (2,N+1):
         if prime[i]:
             yield (i)
-            for j in range(i*i,N,i):
+            for j in range(i*i,N+1,i):
                 prime[j] = False

@@ -11,7 +11,7 @@
     "href": "sieve.html",
     "title": "sieve",
     "section": "",
-    "text": "primes = [p for p in sieve(100)]\ntest_eq(len(primes),25)\n\n\nsource\n\nsieve\n\n sieve (N=10)\n\nsieve of Eratosthenes"
+    "text": "primes = [p for p in sieve(17)]\ntest_eq(len(primes),7)\n\n\nsource\n\nsieve\n\n sieve (N=10)\n\nsieve of Eratosthenes"
   },
   {
     "objectID": "index.html",
@@ -32,6 +32,6 @@
     "href": "index.html#how-to-use",
     "title": "nbdev_sieve",
     "section": "How to use",
-    "text": "How to use\nFor now only the sieve(N: int) generator can be called\n\nN = 100\nprimes = [p for p in sieve(N)]\nprint (len(primes))\n\n25"
+    "text": "How to use\nFor now only the sieve(N: int) generator can be called\n\nN = 17\nprimes = [p for p in sieve(N)]\nprint (primes)\n\n[2, 3, 5, 7, 11, 13]\n\n\n\n## Helper functions\ndef primes(N: int = 10):\n    \"get list of primes\"\n    return [p for p in sieve(N)]\n\ndef prime_count(om: int = 8):\n    \"#primes < 10^om\"\n    return {N: len(primes(N)) for o in range(1,om) if(N:=10**o)}\n\nπ = prime_count()\nπ\n\n{10: 4,\n 100: 25,\n 1000: 168,\n 10000: 1229,\n 100000: 9592,\n 1000000: 78498,\n 10000000: 664579}"
   }
 ]

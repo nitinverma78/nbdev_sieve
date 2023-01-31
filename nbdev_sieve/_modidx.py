@@ -5,4 +5,4 @@ d = { 'settings': { 'branch': 'main',
                 'doc_host': 'https://nitinverma78.github.io',
                 'git_url': 'https://github.com/nitinverma78/nbdev_sieve',
                 'lib_path': 'nbdev_sieve'},
-  'syms': {'nbdev_sieve.core': {'nbdev_sieve.core.foo': ('core.html#foo', 'nbdev_sieve/core.py')}}}
+  'syms': {'nbdev_sieve.sieve': {'nbdev_sieve.sieve.sieve': ('sieve.html#sieve', 'nbdev_sieve/sieve.py')}}}

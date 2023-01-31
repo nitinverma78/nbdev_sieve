@@ -1,0 +1,37 @@
+[
+  {
+    "objectID": "core.html",
+    "href": "core.html",
+    "title": "core",
+    "section": "",
+    "text": "foo\n\n foo ()"
+  },
+  {
+    "objectID": "sieve.html",
+    "href": "sieve.html",
+    "title": "sieve",
+    "section": "",
+    "text": "primes = [p for p in sieve(100)]\ntest_eq(len(primes),25)\n\n\nsource\n\nsieve\n\n sieve (N=10)\n\nsieve of Eratosthenes"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "nbdev_sieve",
+    "section": "",
+    "text": "This file is README and also the index of documentation."
+  },
+  {
+    "objectID": "index.html#install",
+    "href": "index.html#install",
+    "title": "nbdev_sieve",
+    "section": "Install",
+    "text": "Install\npip install nbdev_sieve"
+  },
+  {
+    "objectID": "index.html#how-to-use",
+    "href": "index.html#how-to-use",
+    "title": "nbdev_sieve",
+    "section": "How to use",
+    "text": "How to use\nFor now only the sieve(N: int) generator can be called\n\nN = 100\nprimes = [p for p in sieve(N)]\nprint (len(primes))\n\n25"
+  }
+]

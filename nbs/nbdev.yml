@@ -1,0 +1,9 @@
+project:
+  output-dir: _docs
+
+website:
+  title: "nbdev_sieve"
+  site-url: "https://nitinverma78.github.io/nbdev_sieve"
+  description: "Notebook based development"
+  repo-branch: main
+  repo-url: "https://github.com/nitinverma78/nbdev_sieve"

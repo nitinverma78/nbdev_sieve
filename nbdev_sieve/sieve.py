@@ -9,7 +9,7 @@ from fastcore.utils import *
 # %% ../nbs/00_sieve.ipynb 4
 def sieve(N=10):
     "sieve of Eratosthenes"
-    assert N>1
+    N = int(N)
     prime = [True]*(N+1)
     for i in range (2,N+1):
         if prime[i]:

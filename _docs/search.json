@@ -1,17 +1,10 @@
 [
   {
-    "objectID": "core.html",
-    "href": "core.html",
-    "title": "core",
-    "section": "",
-    "text": "foo\n\n foo ()"
-  },
-  {
     "objectID": "sieve.html",
     "href": "sieve.html",
     "title": "sieve",
     "section": "",
-    "text": "primes = [p for p in sieve(17)]\ntest_eq(len(primes),7)\n\n\nsource\n\nsieve\n\n sieve (N=10)\n\nsieve of Eratosthenes"
+    "text": "print([p for p in sieve(17)])\n\n[2, 3, 5, 7, 11, 13, 17]\n\n\n\n#tests\ntest_eq([p for p in sieve(0)],[])\ntest_eq([p for p in sieve(1)],[])\ntest_eq([p for p in sieve(2)],[2])\ntest_eq([p for p in sieve(3)],[2,3])\n\n\nsource\n\nsieve\n\n sieve (N=10)\n\nsieve of Eratosthenes"
   },
   {
     "objectID": "index.html",
@@ -32,6 +25,6 @@
     "href": "index.html#how-to-use",
     "title": "nbdev_sieve",
     "section": "How to use",
-    "text": "How to use\nFor now only the sieve(N: int) generator can be called\n\nN = 17\nprimes = [p for p in sieve(N)]\nprint (primes)\n\n[2, 3, 5, 7, 11, 13]\n\n\n\n## Helper functions\ndef primes(N: int = 10):\n    \"get list of primes\"\n    return [p for p in sieve(N)]\n\ndef prime_count(om: int = 8):\n    \"#primes < 10^om\"\n    return {N: len(primes(N)) for o in range(1,om) if(N:=10**o)}\n\nπ = prime_count()\nπ\n\n{10: 4,\n 100: 25,\n 1000: 168,\n 10000: 1229,\n 100000: 9592,\n 1000000: 78498,\n 10000000: 664579}"
+    "text": "How to use\nFor now, only the sieve(N: int) generator can be called\n\n## Helper functions\ndef primes(N: int = 10):\n    \"get list of primes\"\n    return [p for p in sieve(N)]\n\nprint (primes(17))\n\n[2, 3, 5, 7, 11, 13, 17]\n\n\n\nCount primes at higher order of magnitude\nsee prime counting function\n\n\n\nn\nπ(n)\n\n\n\n\n10^1\n4\n\n\n10^2\n25\n\n\n10^3\n168\n\n\n10^4\n1,229\n\n\n10^5\n9,592\n\n\n10^6\n78,498\n\n\n10^7\n664,579\n\n\n10^8\n5,761,455\n\n\n10^9\n50,847,534\n\n\n10^10\n455,052,511\n\n\n\n\ndef prime_count(om: int = 8):\n    \"#primes < 10^om\"\n    return {n: len(primes(n)) for o in range(om) if(n:=10**o)}\n\nπ = prime_count()\nπ\n\n{1: 0,\n 10: 4,\n 100: 25,\n 1000: 168,\n 10000: 1229,\n 100000: 9592,\n 1000000: 78498,\n 10000000: 664579}\n\n\n\nfig, ax = plt.subplots()\nax.scatter([math.log10(n) for n in π], [c/n for n, c in π.items()])\nplt.xlabel(\"Order of Magnitude (10^n)\")\nplt.ylabel(\"Fraction of primes\")\nplt.show()"
   }
 ]

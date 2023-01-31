@@ -62,12 +62,6 @@ def prime_count(om: int = 8):
      1000000: 78498,
      10000000: 664579}
 
-``` python
-fig, ax = plt.subplots()
-ax.scatter([math.log10(n) for n in π], [c/n for n, c in π.items()])
-plt.xlabel("Order of Magnitude (10^n)")
-plt.ylabel("Fraction of primes")
-plt.show()
-```
-
-![](index_files/figure-commonmark/cell-4-output-1.png)
+fig, ax = plt.subplots() ax.scatter(\[math.log10(n) for n in π\], \[c/n
+for n, c in π.items()\]) plt.xlabel(“Order of Magnitude (10^n)”)
+plt.ylabel(“Fraction of primes”) plt.show()

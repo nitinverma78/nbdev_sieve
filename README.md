@@ -67,10 +67,6 @@ import matplotlib.pyplot as plt
 ```
 
 ``` python
-#%matplotlib inline
-```
-
-``` python
 fig, ax = plt.subplots()
 ax.scatter([math.log10(n) for n in π], [c/n for n, c in π.items()])
 plt.xlabel("Order of Magnitude (10^n)")
@@ -78,4 +74,4 @@ plt.ylabel("Fraction of primes")
 plt.show()
 ```
 
-![](index_files/figure-commonmark/cell-7-output-1.png)
+![](index_files/figure-commonmark/cell-6-output-1.png)

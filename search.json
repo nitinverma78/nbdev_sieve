@@ -1,0 +1,30 @@
+[
+  {
+    "objectID": "sieve.html",
+    "href": "sieve.html",
+    "title": "sieve",
+    "section": "",
+    "text": "Usage\n\nsource\n\n\nsieve\n\n sieve (N=10)\n\nsieve of Eratosthenes\n\n\nexample\n\nprint([p for p in sieve(17)])\n\n[2, 3, 5, 7, 11, 13, 17]\n\n\n\n\ntests\n\ntest_eq([p for p in sieve(0)],[])\ntest_eq([p for p in sieve(1)],[])\ntest_eq([p for p in sieve(2)],[2])\ntest_eq([p for p in sieve(3)],[2,3])"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "nbdev_sieve",
+    "section": "",
+    "text": "#%matplotlib inline\n\nThe autoreload extension is already loaded. To reload it, use:\n  %reload_ext autoreload\nREADME file and the index of documentation."
+  },
+  {
+    "objectID": "index.html#install",
+    "href": "index.html#install",
+    "title": "nbdev_sieve",
+    "section": "Install",
+    "text": "Install\npip install nbdev_sieve"
+  },
+  {
+    "objectID": "index.html#how-to-use",
+    "href": "index.html#how-to-use",
+    "title": "nbdev_sieve",
+    "section": "How to use",
+    "text": "How to use\nFor now, only the sieve(N: int) generator can be called\n\n## Helper functions\ndef primes(N: int = 10):\n    \"get list of primes\"\n    return [p for p in sieve(N)]\n\nprint (primes(17))\n\n[2, 3, 5, 7, 11, 13, 17]\n\n\n\nCount primes at higher order of magnitude\nsee prime counting function\n\n\n\nn\nπ(n)\n\n\n\n\n\\(10^0\\)\n0\n\n\n\\(10^1\\)\n4\n\n\n\\(10^2\\)\n25\n\n\n\\(10^3\\)\n168\n\n\n\\(10^4\\)\n1,229\n\n\n\\(10^5\\)\n9,592\n\n\n\\(10^6\\)\n78,498\n\n\n\\(10^7\\)\n664,579\n\n\n\\(10^8\\)\n5,761,455\n\n\n\\(10^9\\)\n50,847,534\n\n\n\\(10^{10}\\)\n455,052,511\n\n\n\n\ndef prime_count(om: int = 8):\n    \"#primes < 10^om\"\n    return {n: len(primes(n)) for o in range(om) if(n:=10**o)}\n\nπ = prime_count()\nπ\n\n{1: 0,\n 10: 4,\n 100: 25,\n 1000: 168,\n 10000: 1229,\n 100000: 9592,\n 1000000: 78498,\n 10000000: 664579}\n\n\n\nimport matplotlib.pyplot as plt\n\n\nfig, ax = plt.subplots()\nax.scatter([math.log10(n) for n in π], [c/n for n, c in π.items()])\nplt.xlabel(\"Order of Magnitude (10^n)\")\nplt.ylabel(\"Fraction of primes\")\nplt.show()"
+  }
+]
